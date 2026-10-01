@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2026 FundamentalOS. Licensed under the Apache License, Version 2.0. -->
+<!--
+     The application id is deliberately the stock Pixel "handwritten" clock package, not
+     "...clocks.words": Google's Wallpaper & style picker builds its own PluginManager with a
+     hardcoded privileged-plugin list (bignum, calligraphy, growth, handwritten, inflate, metro,
+     numoverlap, weather), and on user builds it refuses to load any other package, so a clock
+     under its own package id never shows up in the picker. Evolution-X ships no stock handwritten
+     plugin, so there is no conflict. The clock id stays DIGITAL_CLOCK_WORDS.
+-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="com.android.systemui.clocks.words">
+        package="com.android.systemui.clocks.handwritten">
 
     <uses-sdk android:minSdkVersion="36" />
 
